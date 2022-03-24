@@ -25,7 +25,10 @@ public class Gooey extends JFrame implements ActionListener {
     private final ComboPane datePanel = new ComboPane(new JLabel("Departure Date"));
     private final ComboPane departPanel = new ComboPane(new JLabel("Departure-Time"));
 
-    private final ComponentPane[] panes = { firstPanel, lastPanel, emailPanel,
+    private final TextPane[] textPanes = { firstPanel, lastPanel, emailPanel, numberPanel, agePanel };
+    private final ComboPane[] comboPanes = { genderPanel, cityPanel, statePanel, datePanel, departPanel };
+
+    private final ComponentPane[] allPanes = { firstPanel, lastPanel, emailPanel,
             numberPanel, agePanel, cityPanel, statePanel, genderPanel, datePanel, departPanel };
 
     Gooey() {
@@ -71,7 +74,7 @@ public class Gooey extends JFrame implements ActionListener {
         JPanel tripPane = new JPanel(new GridLayout(0, 2));
 
         ActionListener resetter = (e) -> {
-            Arrays.stream(panes).forEach(ComponentPane::reset);
+            Arrays.stream(allPanes).forEach(ComponentPane::reset);
             firstPanel.focus();
         };
 
@@ -103,10 +106,9 @@ public class Gooey extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        ArrayList<String> list = new ArrayList<>();
-
         if (checkValidity()) {
-            for (var x : panes) {
+            ArrayList<String> list = new ArrayList<>();
+            for (var x : allPanes) {
                 list.add(x.getText());
             }
             generateTicket(list);
@@ -123,9 +125,9 @@ public class Gooey extends JFrame implements ActionListener {
     }
 
     private boolean checkValidity() {
-        // more can be done here
+        //ensures fields are not empty, highlight fields that are empty
         boolean valid = true;
-        for (var x : panes) {
+        for (var x : allPanes) {
             if (x == agePanel || x == numberPanel) {
                 if (x.getNumbers().isBlank()) {
                     x.setBorder(BorderFactory.createLineBorder(Color.RED));
