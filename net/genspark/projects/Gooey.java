@@ -25,9 +25,6 @@ public class Gooey extends JFrame implements ActionListener {
     private final ComboPane datePanel = new ComboPane(new JLabel("Departure Date"));
     private final ComboPane departPanel = new ComboPane(new JLabel("Departure-Time"));
 
-    private final TextPane[] textPanes = { firstPanel, lastPanel, emailPanel, numberPanel, agePanel };
-    private final ComboPane[] comboPanes = { genderPanel, cityPanel, statePanel, datePanel, departPanel };
-
     private final ComponentPane[] allPanes = { firstPanel, lastPanel, emailPanel,
             numberPanel, agePanel, cityPanel, statePanel, genderPanel, datePanel, departPanel };
 
