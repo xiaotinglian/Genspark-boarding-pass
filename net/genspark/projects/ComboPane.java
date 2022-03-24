@@ -30,6 +30,10 @@ class ComboPane extends ComponentPane {
         box.setModel(model);
     }
 
+    int getIndex(){
+        return box.getSelectedIndex();
+    }
+
     @Override
     String getNumbers() {
         return box.getItemAt(box.getSelectedIndex());
