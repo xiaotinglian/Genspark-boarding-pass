@@ -1,6 +1,9 @@
 package net.genspark.projects;
 
 import javax.swing.JLabel;
+
+import java.awt.Color;
+
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 
@@ -10,7 +13,13 @@ class ComboPane extends ComponentPane {
 
     ComboPane(JLabel label) {
         super(label);
+        box.setBackground(Color.WHITE);
         add(box);
+    }
+    
+    void setModel(String[] arr) {
+        DefaultComboBoxModel<String> model = new DefaultComboBoxModel<>(arr);
+        box.setModel(model);
     }
 
     String getText() {
@@ -23,11 +32,6 @@ class ComboPane extends ComponentPane {
 
     void focus() {
         box.grabFocus();
-    }
-
-    void setModel(String[] arr) {
-        DefaultComboBoxModel<String> model = new DefaultComboBoxModel<>(arr);
-        box.setModel(model);
     }
 
     int getIndex(){
