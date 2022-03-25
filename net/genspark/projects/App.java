@@ -26,6 +26,23 @@ public class App {
             System.out.println(e.getMessage());
         }
     }
+    
+    public static String[] getDefaultDates() {
+        return LocalDate.now().datesUntil(
+                LocalDate.of(2023, 4, LocalDate.now().getDayOfMonth()))
+                .map(LocalDate::toString)
+                .toArray(String[]::new);
+    }
+
+    public static String[] getDefaultTimes() {
+        ArrayList<String> times = new ArrayList<>();
+        LocalTime time = LocalTime.MIDNIGHT;
+        do {
+            times.add(time.toString());
+            time = time.plusMinutes(30);
+        } while (time.isAfter(LocalTime.MIN));
+        return times.toArray(String[]::new);
+    }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new Gooey());
