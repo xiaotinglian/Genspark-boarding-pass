@@ -1,7 +1,0 @@
-Paris,11,482
-Tokyo,13,343
-Seoul,13,384
-Hong Kong,15,600
-London,11,411
-Sydney,15,550
-Mexico City,3,200
