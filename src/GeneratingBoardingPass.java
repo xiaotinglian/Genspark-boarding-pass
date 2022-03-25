@@ -75,7 +75,7 @@ public class GeneratingBoardingPass {
 
             }
         }
-        String ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/mm/yyyy").parse(userDate+departureTime),length).toString();
+        String ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate+departureTime),length).toString();
         UserInformation user1 = new UserInformation(name,boardingPassNumber,ticketPrice,ETA,email,phoneNumber,gender,age,date,departure,
                 destination,departureTime);
         System.out.println(user1.toString());
