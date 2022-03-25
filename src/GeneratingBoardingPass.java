@@ -44,7 +44,6 @@ public class GeneratingBoardingPass {
 //        gender ="female";
         System.out.println("Enter your age: ");
         age = scanner.nextInt();
-//        age = 65;
 
         System.out.println("Enter your date in format of dd/MM/yyyy: ");
 //        String userDate = "6/6/2022";
