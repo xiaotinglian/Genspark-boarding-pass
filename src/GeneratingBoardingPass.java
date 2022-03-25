@@ -81,7 +81,6 @@ public class GeneratingBoardingPass {
         System.out.println(user1.toString());
         writeToTextFile(name, user1);
 
-
     }
     public static Date addHoursToJavaUtilDate(Date date, int hours) {
         Calendar calendar = Calendar.getInstance();
@@ -97,5 +96,4 @@ public class GeneratingBoardingPass {
         Files.write(Paths.get(""+name+".txt"), list,utf8,
                 StandardOpenOption.CREATE, StandardOpenOption.APPEND);
     }
-
 }
