@@ -22,10 +22,7 @@ public class GeneratingBoardingPass {
         String destination;
         String departureTime;
 
-
         double ticketPrice= 0;
-
-
 
         final int Max = 99999999;
         Scanner scanner = new Scanner(System.in);
@@ -39,13 +36,13 @@ public class GeneratingBoardingPass {
         System.out.println("Enter your phone number: ");
         phoneNumber = scanner.nextLine();
 //        phoneNumber = "7148372804";
-        System.out.println("Enter your gender(male or female): ");
+        System.out.println("Enter your gender(male, female, or other): ");
         gender = scanner.nextLine();
 //        gender ="female";
         System.out.println("Enter your age: ");
         age = scanner.nextInt();
 
-        System.out.println("Enter your date in format of dd/MM/yyyy: ");
+        System.out.println("Enter your date in format of dd/mm/yyyy: ");
 //        String userDate = "6/6/2022";
         String userDate = scanner.next();
         date =new SimpleDateFormat("dd/MM/yyyy").parse(userDate).toString().substring(0,10);
@@ -78,7 +75,7 @@ public class GeneratingBoardingPass {
 
             }
         }
-        String ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate+departureTime),length).toString();
+        String ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/mm/yyyy").parse(userDate+departureTime),length).toString();
         UserInformation user1 = new UserInformation(name,boardingPassNumber,ticketPrice,ETA,email,phoneNumber,gender,age,date,departure,
                 destination,departureTime);
         System.out.println(user1.toString());
