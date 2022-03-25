@@ -63,7 +63,7 @@ public class GeneratingBoardingPass {
         departureTime = " " + departureTime;
         Random rand = new Random();
         int boardingPassNumber = rand.nextInt(Max) ;
-        String path = "destination.txt";
+        String path = "generateBoardingPass/destination.txt";
         List<String> destinationList = Files.readAllLines(Paths.get(path));
         int length = 0;
         for (String line : destinationList
@@ -94,7 +94,7 @@ public class GeneratingBoardingPass {
         Charset utf8 = StandardCharsets.UTF_8;
         List<String> list = new ArrayList<>();
         list.add(user1.toString());
-        String userTextFile = "userInformation";
+        String userTextFile = name;
         Files.write(Paths.get(userTextFile), list,utf8,
                 StandardOpenOption.CREATE, StandardOpenOption.APPEND);
     }
