@@ -29,7 +29,7 @@ public class GeneratingBoardingPass {
 
         System.out.println("Enter your full name: ");
         name = scanner.nextLine();
-//        name = "Khang Duc Nguyen";
+//        name = "Khang Duc Nguyen"
         System.out.println("Enter your email: ");
         email = scanner.nextLine();
 //        email = "noozip2241993@gmail.com";
