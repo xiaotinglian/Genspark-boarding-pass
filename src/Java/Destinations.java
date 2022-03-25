@@ -47,7 +47,7 @@ public class Destinations {
         }
 
         String ETA = "";
-        int ticketPrice = 0;
+        double ticketPrice = 0;
         switch(destination) {
             case 1:
                 ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime), Integer.parseInt(flightLengthList.get(0))).toString();
