@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.util.ArrayList;
@@ -13,12 +14,13 @@ import java.util.Arrays;
 
 public class Gooey extends JFrame implements ActionListener {
 
+    // JTextfields
     private final TextPane firstPanel = new TextPane(new JLabel("First-Name"));
     private final TextPane lastPanel = new TextPane(new JLabel("Last-Name"));
     private final TextPane emailPanel = new TextPane(new JLabel("E-Mail"));
     private final TextPane numberPanel = new TextPane(new JLabel("Phone-Number"));
     private final TextPane agePanel = new TextPane(new JLabel("Age"));
-
+    // JComboPanes
     private final ComboPane genderPanel = new ComboPane(new JLabel("Gender"));
     private final ComboPane cityPanel = new ComboPane(new JLabel("Destination City"));
     private final ComboPane statePanel = new ComboPane(new JLabel("Destination State"));
@@ -32,25 +34,37 @@ public class Gooey extends JFrame implements ActionListener {
         super("New Boarding Pass");
         setModels();
         addPanels();
+        initFrame();
+    }
+
+    private void initFrame() {
+        try {
+            UIManager.setLookAndFeel(
+                    UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
         pack();
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
+
     }
 
     private void setModels() {
-
         ArrayList<String> times = new ArrayList<>();
         LocalTime time = LocalTime.MIDNIGHT;
+        String[] timeArray;
+        String[] dates;
+
         do {
             times.add(time.toString());
             time = time.plusMinutes(30);
         } while (time.isAfter(LocalTime.MIN));
 
-        String[] timeArray = times.toArray(String[]::new);
-
-        String[] dates = LocalDate.now().datesUntil(
+        timeArray = times.toArray(String[]::new);
+        dates = LocalDate.now().datesUntil(
                 LocalDate.of(2023, 4, LocalDate.now().getDayOfMonth()))
                 .map(LocalDate::toString)
                 .toArray(String[]::new);
@@ -63,20 +77,10 @@ public class Gooey extends JFrame implements ActionListener {
     }
 
     private void addPanels() {
-        JButton submitButn = new JButton("Send"),
-                resetButn = new JButton("Reset");
-
-        JPanel butnPane = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        JPanel userPane = new JPanel(new GridLayout(0, 2));
-        JPanel tripPane = new JPanel(new GridLayout(0, 2));
-
-        ActionListener resetter = (e) -> {
-            Arrays.stream(allPanes).forEach(ComponentPane::reset);
-            firstPanel.focus();
-        };
-
-        submitButn.addActionListener(this);
-        resetButn.addActionListener(resetter);
+        GridLayout grid = new GridLayout(0, 2, 1, 1);
+        // panels
+        JPanel userPane = new JPanel(grid);
+        JPanel tripPane = new JPanel(grid);
         // top panel
         userPane.add(firstPanel);
         userPane.add(lastPanel);
@@ -89,15 +93,40 @@ public class Gooey extends JFrame implements ActionListener {
         tripPane.add(cityPanel);
         tripPane.add(datePanel);
         tripPane.add(departPanel);
-        // button panel
-        butnPane.add(submitButn);
-        butnPane.add(resetButn);
+        // borders
         userPane.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.BLACK), "User Info"));
         tripPane.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.BLACK), "Trip Info"));
         // add frame Components
         add(userPane);
         add(tripPane);
         add(new JSeparator(SwingConstants.HORIZONTAL));
+        addButtons();
+
+    }
+
+    private void addButtons() {
+        ActionListener resetter = (e) -> {
+            Arrays.stream(allPanes).forEach(ComponentPane::reset);
+            firstPanel.focus();
+        };
+        JPanel butnPane = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JButton submitButn = new JButton("Send");
+        JButton resetButn = new JButton("Reset");
+        Cursor pointer = new Cursor(Cursor.HAND_CURSOR);
+
+        // backgrounds
+        submitButn.setBackground(Color.CYAN);
+        resetButn.setBackground(Color.LIGHT_GRAY);
+        // Cursors
+        submitButn.setCursor(pointer);
+        resetButn.setCursor(pointer);
+        // ActionListeners
+        submitButn.addActionListener(this);
+        resetButn.addActionListener(resetter);
+        // addtopanel
+        butnPane.add(submitButn);
+        butnPane.add(resetButn);
+        // add to frame
         add(butnPane);
     }
 
@@ -105,9 +134,8 @@ public class Gooey extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (checkValidity()) {
             ArrayList<String> list = new ArrayList<>();
-            for (var x : allPanes) {
+            for (var x : allPanes)
                 list.add(x.getText());
-            }
             generateTicket(list);
         } else {
             JOptionPane.showMessageDialog(this, "One or more fields is invalid.");
@@ -122,7 +150,7 @@ public class Gooey extends JFrame implements ActionListener {
     }
 
     private boolean checkValidity() {
-        //ensures fields are not empty, highlight fields that are empty
+        // ensures fields are not empty, highlight fields that are empty
         boolean valid = true;
         for (var x : allPanes) {
             if (x == agePanel || x == numberPanel) {
@@ -138,9 +166,5 @@ public class Gooey extends JFrame implements ActionListener {
             }
         }
         return valid;
-    }
-
-    public static void main(String[] args) {
-        new Gooey();
     }
 }
