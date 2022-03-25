@@ -50,44 +50,44 @@ public class Destinations {
         int ticketPrice = 0;
         switch(destination) {
             case 1:
-                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime),flightLengthList.get(0)).toString();
-                ticketPrice = Integer.parseInt(ticketPriceList.get(0));
+                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime), Integer.parseInt(flightLengthList.get(0))).toString();
+                ticketPrice = Double.parseDouble(ticketPriceList.get(0));
                 break;
             case 2:
-                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime),flightLengthList.get(1)).toString();
-                ticketPrice = Integer.parseInt(ticketPriceList.get(1));
+                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime), Integer.parseInt(flightLengthList.get(1))).toString();
+                ticketPrice = Double.parseDouble(ticketPriceList.get(1));
                 break;
             case 3:
-                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime),flightLengthList.get(1)).toString();
-                ticketPrice = Integer.parseInt(ticketPriceList.get(2));
+                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime), Integer.parseInt(flightLengthList.get(2))).toString();
+                ticketPrice = Double.parseDouble(ticketPriceList.get(2));
                 break;
             case 4:
-                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime),flightLengthList.get(1)).toString();
-                ticketPrice = Integer.parseInt(ticketPriceList.get(3));
+                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime), Integer.parseInt(flightLengthList.get(3))).toString();
+                ticketPrice = Double.parseDouble(ticketPriceList.get(3));
                 break;
             case 5:
-                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime),flightLengthList.get(1)).toString();
-                ticketPrice = Integer.parseInt(ticketPriceList.get(4));
+                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime), Integer.parseInt(flightLengthList.get(4))).toString();
+                ticketPrice = Double.parseDouble(ticketPriceList.get(4));
                 break;
             case 6:
-                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime),flightLengthList.get(1)).toString();
-                ticketPrice = Integer.parseInt(ticketPriceList.get(5));
+                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime), Integer.parseInt(flightLengthList.get(5))).toString();
+                ticketPrice = Double.parseDouble(ticketPriceList.get(5));
                 break;
             case 7:
-                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime),flightLengthList.get(1)).toString();
-                ticketPrice = Integer.parseInt(ticketPriceList.get(6));
+                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime), Integer.parseInt(flightLengthList.get(6))).toString();
+                ticketPrice = Double.parseDouble(ticketPriceList.get(6));
                 break;
             case 8:
-                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime),flightLengthList.get(1)).toString();
-                ticketPrice = Integer.parseInt(ticketPriceList.get(7));
+                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime), Integer.parseInt(flightLengthList.get(7))).toString();
+                ticketPrice = Double.parseDouble(ticketPriceList.get(7));
                 break;
             case 9:
-                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime),flightLengthList.get(1)).toString();
-                ticketPrice = Integer.parseInt(ticketPriceList.get(8));
+                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime), Integer.parseInt(flightLengthList.get(8))).toString();
+                ticketPrice = Double.parseDouble(ticketPriceList.get(8));
                 break;
             case 10:
-                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime),flightLengthList.get(1)).toString();
-                ticketPrice = Integer.parseInt(ticketPriceList.get(9));
+                ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime), Integer.parseInt(flightLengthList.get(9))).toString();
+                ticketPrice = Double.parseDouble(ticketPriceList.get(9));
                 break;
         }
     }
