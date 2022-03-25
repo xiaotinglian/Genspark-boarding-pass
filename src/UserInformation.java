@@ -1,8 +1,8 @@
 
 import java.text.NumberFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Locale;
+
 
 
 public class UserInformation {

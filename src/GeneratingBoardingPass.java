@@ -61,6 +61,7 @@ public class GeneratingBoardingPass {
 
         departureTime = anotherScanner.nextLine();
         departureTime = " " + departureTime;
+
         Random rand = new Random();
         int boardingPassNumber = rand.nextInt(Max) ;
         String path = "destination.txt";
