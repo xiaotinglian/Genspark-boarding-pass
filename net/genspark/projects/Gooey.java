@@ -3,8 +3,6 @@ package net.genspark.projects;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.FlowLayout;
@@ -53,25 +51,16 @@ public class Gooey extends JFrame implements ActionListener {
     }
 
     private void setModels() {
-        ArrayList<String> times = new ArrayList<>();
-        LocalTime time = LocalTime.MIDNIGHT;
-        String[] timeArray;
-        String[] dates;
-
-        do {
-            times.add(time.toString());
-            time = time.plusMinutes(30);
-        } while (time.isAfter(LocalTime.MIN));
-
-        timeArray = times.toArray(String[]::new);
-        dates = LocalDate.now().datesUntil(
-                LocalDate.of(2023, 4, LocalDate.now().getDayOfMonth()))
-                .map(LocalDate::toString)
-                .toArray(String[]::new);
-
-        genderPanel.setModel(new String[] { "MALE", "FEMALE", "NON-BINARY" });
-        cityPanel.setModel(new String[] { "New York", "Miami", "Los Angeles" });
-        statePanel.setModel(new String[] { "New York", "Florida", "California" });
+        // default models change as needed
+        String[] timeArray = App.getDefaultTimes();
+        String[] dates = App.getDefaultDates();
+        String[] genders = new String[] { "MALE", "FEMALE", "NON-BINARY" };
+        String[] cities = new String[] { "New York", "Miami", "Los Angeles" };
+        String[] states = new String[] { "New York", "Florida", "California" };
+        //set the models on the combopanes
+        genderPanel.setModel(genders);
+        cityPanel.setModel(cities);
+        statePanel.setModel(states);
         datePanel.setModel(dates);
         departPanel.setModel(timeArray);
     }
