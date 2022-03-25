@@ -78,7 +78,7 @@ public class GeneratingBoardingPass {
         }
 
 
-        switch(destination) {
+        switch(destinationNum) {
             case 1:
                 ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime), Integer.parseInt(flightLengthList.get(0))).toString();
                 ticketPrice = Double.parseDouble(ticketPriceList.get(0));
