@@ -3,8 +3,6 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Locale;
 
-
-
 public class UserInformation {
     private String name;
     private int boardingPassNumber;
@@ -140,9 +138,7 @@ public class UserInformation {
         this.ETA = ETA;
     }
 
-
-
-
+    @Override
     public String toString(){
         NumberFormat n = NumberFormat.getCurrencyInstance(Locale.US);
         String result = null;
@@ -161,6 +157,4 @@ public class UserInformation {
         }
         return result;
     }
-
-
 }

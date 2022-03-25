@@ -73,7 +73,6 @@ public class GeneratingBoardingPass {
             if(value[0].equals(destination)){
                 length = Integer.parseInt(value[1]);
                 ticketPrice = Double.parseDouble(value[2]);
-
             }
         }
         String ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate+departureTime),length).toString();
