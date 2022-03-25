@@ -143,10 +143,10 @@ public class UserInformation {
         NumberFormat n = NumberFormat.getCurrencyInstance(Locale.US);
         String result = null;
         try {
-            result = "Boarding Pass Number: " + getBoardingPassNumber() +".             Date: " + getDate()
+            result = "Boarding Pass Number: " + getBoardingPassNumber() +"             Date: " + getDate()
                     + "\nName: " + getName()
                     + "\nGender: " + getGender() + ". Age: " + getAge()
-                    + "\nEmail: " + getEmail() + ".               Phone Number: " + getPhoneNumber()
+                    + "\nEmail: " + getEmail() + "                  Phone Number: " + getPhoneNumber()
                     + "\nOrigin: " + getDeparture()
                     + "\nDestination: " + getDestination()
                     + "\nDeparture Time: " + getDepartureTime()
