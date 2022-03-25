@@ -1,9 +1,7 @@
 
 import java.text.NumberFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Locale;
-
 
 public class UserInformation {
     private String name;
@@ -140,22 +138,23 @@ public class UserInformation {
         this.ETA = ETA;
     }
 
-
-
-
+    @Override
     public String toString(){
         NumberFormat n = NumberFormat.getCurrencyInstance(Locale.US);
         String result = null;
         try {
-            result = "Boarding Pass Number: " + getBoardingPassNumber() +". Date: " + getDate() + ". Origin: " + getDeparture()
-                    + ". Destination: " + getDestination()+ ". ETA: "+ getETA()  + ". Departure Time: " + getDepartureTime()
-                    + "\nName: " + getName() + ". Email: " + getEmail() + ". Phone Number: " + getPhoneNumber() + " . Gender: "
-                    + getGender() + ". Age: " + getAge() + "\nTicket Price: " + n.format(getTicketPrice());
+            result = "Boarding Pass Number: " + getBoardingPassNumber() +"             Date: " + getDate()
+                    + "\nName: " + getName()
+                    + "\nGender: " + getGender() + ". Age: " + getAge()
+                    + "\nEmail: " + getEmail() + "                  Phone Number: " + getPhoneNumber()
+                    + "\nOrigin: " + getDeparture()
+                    + "\nDestination: " + getDestination()
+                    + "\nDeparture Time: " + getDepartureTime()
+                    + "\nETA: "+ getETA()
+                    + "\nTicket Price: " + n.format(getTicketPrice());
         } catch (ParseException e) {
             e.printStackTrace();
         }
         return result;
     }
-
-
 }

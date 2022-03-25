@@ -61,6 +61,7 @@ public class GeneratingBoardingPass {
 
         departureTime = anotherScanner.nextLine();
         departureTime = " " + departureTime;
+
         Random rand = new Random();
         int boardingPassNumber = rand.nextInt(Max) ;
         String path = "destination.txt";
@@ -72,7 +73,6 @@ public class GeneratingBoardingPass {
             if(value[0].equals(destination)){
                 length = Integer.parseInt(value[1]);
                 ticketPrice = Double.parseDouble(value[2]);
-
             }
         }
         String ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate+departureTime),length).toString();
@@ -80,7 +80,6 @@ public class GeneratingBoardingPass {
                 destination,departureTime);
         System.out.println(user1.toString());
         writeToTextFile(name, user1);
-
 
     }
     public static Date addHoursToJavaUtilDate(Date date, int hours) {
@@ -94,9 +93,7 @@ public class GeneratingBoardingPass {
         Charset utf8 = StandardCharsets.UTF_8;
         List<String> list = new ArrayList<>();
         list.add(user1.toString());
-        String userTextFile = name;
-        Files.write(Paths.get(userTextFile), list,utf8,
+        Files.write(Paths.get(""+name+".txt"), list,utf8,
                 StandardOpenOption.CREATE, StandardOpenOption.APPEND);
     }
-
 }
