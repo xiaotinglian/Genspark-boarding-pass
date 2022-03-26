@@ -1,72 +1,41 @@
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
+package Java;
+
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
-
-public class GeneratingBoardingPass {
-
-    public static void main(String[] args) throws ParseException, IOException {
-	// write your code here
-        String name;
-        String email;
-        String phoneNumber;
-        String gender;
-        int age;
-        String date;
-        String departure;
-        String destination;
-        String departureTime;
-
-        double ticketPrice= 0;
-        String ETA = "";
-
-        final int Max = 99999999;
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter your full name: ");
-        name = scanner.nextLine();
-//        name = "Khang Duc Nguyen"
-        System.out.println("Enter your email: ");
-        email = scanner.nextLine();
-//        email = "noozip2241993@gmail.com";
-        System.out.println("Enter your phone number: ");
-        phoneNumber = scanner.nextLine();
-//        phoneNumber = "7148372804";
-        System.out.println("Enter your gender(male, female, or other): ");
-        gender = scanner.nextLine();
-//        gender ="female";
-        System.out.println("Enter your age: ");
-        age = scanner.nextInt();
-
-        System.out.println("Enter your date in format of dd/mm/yyyy: ");
-//        String userDate = "6/6/2022";
-        String userDate = scanner.next();
-        date =new SimpleDateFormat("dd/MM/yyyy").parse(userDate).toString().substring(0,10);
+import java.util.ArrayList;
 
 
-        Scanner anotherScanner = new Scanner(System.in);
-//        date = scanner.nextLine();
-        System.out.println("Your departure: Los Angeles ");
-        departure = "Los Angeles";
-//        departure = scanner.nextLine();
-        System.out.println("Enter your destination: ");
-//        destination = "London";
-        destination = anotherScanner.nextLine();
-        System.out.println("Enter your departure time in format of hh:mm: ");
-//        departureTime = " 12:30";
+public class Destinations {
 
-        departureTime = anotherScanner.nextLine();
-        departureTime = " " + departureTime;
+    public static void flightList() throws IOException {
+        /* Creation of flight list. All flights are out of DIA, data is formatted: destination,
+        flight length, ticket price.*/
 
-        Random rand = new Random();
-        int boardingPassNumber = rand.nextInt(Max) ;
+        File flights = new File("src/Java/flights.txt");
+        try {
+            FileWriter writer = new FileWriter(flights);
+            writer.write("Paris, 10, 780\n");
+            writer.write("Tokyo, 16, 1542\n");
+            writer.write("Seoul, 17, 1154\n");
+            writer.write("Hong Kong, 26, 1982\n");
+            writer.write("London, 9, 706\n");
+            writer.write("Sydney, 18, 1327\n");
+            writer.write("Mexico City, 4, 265\n");
+            writer.write("Vancouver, 3, 421\n");
+            writer.write("Los Angeles, 3, 138\n");
+            writer.write("New York City, 4, 208");
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
 
-        ArrayList<String> listFlights = (ArrayList<String>) Files.readAllLines(Paths.get("destination.txt"));
+    }
+
+    public static void arrivalAndPrice(int departure, int destination) throws IOException {
+        ArrayList<String> listFlights = (ArrayList<String>) Files.readAllLines(Paths.get("src/Java/flights.txt"));
         ArrayList<String> flightLengthList = new ArrayList<>();
         ArrayList<String> ticketPriceList = new ArrayList<>();
         String[] flightInfo;
@@ -77,8 +46,9 @@ public class GeneratingBoardingPass {
             ticketPriceList.add(flightInfo[2]);
         }
 
-
-        switch(destinationNum) {
+        String ETA = "";
+        double ticketPrice = 0;
+        switch(destination) {
             case 1:
                 ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate + departureTime), Integer.parseInt(flightLengthList.get(0))).toString();
                 ticketPrice = Double.parseDouble(ticketPriceList.get(0));
@@ -120,25 +90,5 @@ public class GeneratingBoardingPass {
                 ticketPrice = Double.parseDouble(ticketPriceList.get(9));
                 break;
         }
-
-        UserInformation user1 = new UserInformation(name,boardingPassNumber,ticketPrice,ETA,email,phoneNumber,gender,age,date,departure,
-                destination,departureTime);
-        System.out.println(user1.toString());
-        writeToTextFile(name, user1);
-
-    }
-    public static Date addHoursToJavaUtilDate(Date date, int hours) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
-        calendar.add(Calendar.HOUR_OF_DAY, hours);
-        return calendar.getTime();
-    }
-
-    private static void writeToTextFile(String name, UserInformation user1) throws IOException {
-        Charset utf8 = StandardCharsets.UTF_8;
-        List<String> list = new ArrayList<>();
-        list.add(user1.toString());
-        Files.write(Paths.get(""+name+".txt"), list,utf8,
-                StandardOpenOption.CREATE, StandardOpenOption.APPEND);
     }
 }
