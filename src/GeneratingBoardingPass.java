@@ -64,8 +64,7 @@ public class GeneratingBoardingPass {
 
         Random rand = new Random();
         int boardingPassNumber = rand.nextInt(Max) ;
-        String path = "destination.txt";
-        List<String> destinationList = Files.readAllLines(Paths.get(path));
+        List<String> destinationList = Files.readAllLines(Paths.get("destination.txt"));
         int length = 0;
         for (String line : destinationList
         ) {
@@ -80,7 +79,6 @@ public class GeneratingBoardingPass {
                 destination,departureTime);
         System.out.println(user1.toString());
         writeToTextFile(name, user1);
-
     }
     public static Date addHoursToJavaUtilDate(Date date, int hours) {
         Calendar calendar = Calendar.getInstance();
