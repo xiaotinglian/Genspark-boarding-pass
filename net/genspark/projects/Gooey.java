@@ -122,6 +122,32 @@ public class Gooey extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (checkValidity()) {
+             /*
+             * Robs Entry Point
+             * --------------------------------
+             * Adds all the text in all panes and combo boxes to a list
+             * 'generates a faux ticket'
+             * This can and should be edited.
+             * --------------------------------
+             * if the element is a combopanel You can say :
+             * genderpanel.getText() --> returns (String) Male or Female or non-Binary
+             * (Whichever is
+             * selected)
+             * OR
+             * genderpanel.getIndex() --> returns the index of the element in the provided
+             * model's Array.
+             * --------------------------------
+             * String[] genders = new String[] { "MALE", "FEMALE", "NON-BINARY" };
+             * Above is the model for the genderpanel.
+             * when an item is selected in the combobox, getIndex() will return the item's
+             * index in the model.
+             * if MALE is selected in combobox,
+             * genderpanel.getIndex() --> returns (int) 0
+             * --------------------------------
+             * The Following JOptionPane displays this.
+             */
+            JOptionPane.showMessageDialog(this, "Gender Panel Text = " + genderPanel.getText()
+                    + " Gender Panel model index selected = " + genderPanel.getIndex());
             ArrayList<String> list = new ArrayList<>();
             for (var x : allPanes)
                 list.add(x.getText());
