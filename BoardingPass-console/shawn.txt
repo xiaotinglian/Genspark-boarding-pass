@@ -1,0 +1,9 @@
+Boarding Pass Number: 59761659             Date: Mon Dec 12
+Name: shawn
+Gender: female. Age: 12
+Email: kasjhd@jshd.com                  Phone Number: 2387428
+Origin: Los Angeles
+Destination: HongKong
+Departure Time:  12:12
+ETA: Mon Dec 12 00:00:00 EST 2022
+Ticket Price: $0.00
