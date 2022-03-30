@@ -1,3 +1,0 @@
-Boarding Pass Number: 75645498. Date: Wed Dec 12. Origin: Los Angeles. Destination: Sydney. ETA: Wed Dec 12 15:00:00 EST 2012. Departure Time:  10:09
-Name: Pret. Email: Pret@gmail.com. Phone Number: 873492242 . Gender: female. Age: 23
-Ticket Price: $550.00
