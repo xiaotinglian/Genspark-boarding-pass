@@ -1,0 +1,10 @@
+Paris, 10, 780
+Tokyo, 16, 1542
+Seoul, 17, 1154
+Hong Kong, 26, 1982
+London, 9, 706
+Sydney, 18, 1327
+Mexico City, 4, 265
+Vancouver, 3, 421
+Los Angeles, 3, 138
+New York City, 4, 208
