@@ -1,9 +1,0 @@
-Boarding Pass Number: 8823915.             Date: Mon Jan 09
-Name: Teddy
-Gender: female. Age: 23
-Email: Teddy@gmail.com.               Phone Number: 293782934
-Origin: Los Angeles
-Destination: Tokyo
-Departure Time:  14:15
-ETA: Mon Jan 09 13:00:00 EST 2023
-Ticket Price: $343.00
