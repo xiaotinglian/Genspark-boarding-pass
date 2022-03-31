@@ -7,6 +7,8 @@ import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -55,8 +57,8 @@ public class Gooey extends JFrame implements ActionListener {
         String[] timeArray = App.getDefaultTimes();
         String[] dates = App.getDefaultDates();
         String[] genders = new String[] { "MALE", "FEMALE", "NON-BINARY" };
-        String[] cities = new String[] { "New York", "Miami", "Los Angeles" };
-        String[] states = new String[] { "New York", "Florida", "California" };
+        String[] cities = new String[] { "New York", "Miami", "Denver", "Austin", "Chicago" };
+        String[] states = new String[] { "New York", "Florida", "Colorado", "Texas", "Illinois" };
         //set the models on the combopanes
         genderPanel.setModel(genders);
         cityPanel.setModel(cities);
@@ -149,8 +151,22 @@ public class Gooey extends JFrame implements ActionListener {
             JOptionPane.showMessageDialog(this, "Gender Panel Text = " + genderPanel.getText()
                     + " Gender Panel model index selected = " + genderPanel.getIndex());
             ArrayList<String> list = new ArrayList<>();
-            for (var x : allPanes)
+            for (var x : allPanes) {
                 list.add(x.getText());
+            }
+            try {
+                String price = App.getTicketPrice(cityPanel.getIndex(),Integer.parseInt(agePanel.getText()),genderPanel.getText());
+                list.add(price);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+
+            try {
+                String arrival = App.getArrivalTime(cityPanel.getIndex(), departPanel.getText(), datePanel.getText());
+                list.add(arrival);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
             generateTicket(list);
         } else {
             JOptionPane.showMessageDialog(this, "One or more fields is invalid.");
