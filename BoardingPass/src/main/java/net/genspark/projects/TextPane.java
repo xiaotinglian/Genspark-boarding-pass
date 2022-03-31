@@ -1,14 +1,13 @@
 package net.genspark.projects;
 
-import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 class TextPane extends ComponentPane {
 
     private final JTextField field = new JTextField(20);
 
-    TextPane(JLabel label) {
-        super(label);
+    TextPane(String str) {
+        super(str);
         add(field);
     }
 

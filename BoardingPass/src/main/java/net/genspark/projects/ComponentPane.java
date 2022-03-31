@@ -5,12 +5,9 @@ import java.awt.FlowLayout;
 
 abstract class ComponentPane extends JPanel {
 
-    JLabel label;
-
-    ComponentPane(JLabel label) {
-        this.label = label;
+    ComponentPane(String str) {
+        add(new JLabel(str));
         setLayout(new FlowLayout(FlowLayout.RIGHT));
-        add(label);
     }
 
     abstract String getNumbers();

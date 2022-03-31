@@ -1,9 +1,7 @@
 package net.genspark.projects;
 
-import javax.swing.JLabel;
 
 import java.awt.Color;
-
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 
@@ -11,8 +9,8 @@ class ComboPane extends ComponentPane {
 
     private final JComboBox<String> box = new JComboBox<>();
 
-    ComboPane(JLabel label) {
-        super(label);
+    ComboPane(String str) {
+        super(str);
         box.setBackground(Color.WHITE);
         add(box);
     }

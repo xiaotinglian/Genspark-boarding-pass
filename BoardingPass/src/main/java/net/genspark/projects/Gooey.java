@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.awt.event.ActionListener;
 import java.awt.Color;
 import java.awt.Cursor;
@@ -16,17 +17,17 @@ import java.util.Arrays;
 public class Gooey extends JFrame implements ActionListener {
 
     // JTextfields
-    private final TextPane firstPanel = new TextPane(new JLabel("First-Name"));
-    private final TextPane lastPanel = new TextPane(new JLabel("Last-Name"));
-    private final TextPane emailPanel = new TextPane(new JLabel("E-Mail"));
-    private final TextPane numberPanel = new TextPane(new JLabel("Phone-Number"));
-    private final TextPane agePanel = new TextPane(new JLabel("Age"));
+    private final TextPane firstPanel = new TextPane("First-Name");
+    private final TextPane lastPanel = new TextPane("Last-Name");
+    private final TextPane emailPanel = new TextPane("E-Mail");
+    private final TextPane numberPanel = new TextPane("Phone-Number");
+    private final TextPane agePanel = new TextPane("Age");
     // JComboPanes
-    private final ComboPane genderPanel = new ComboPane(new JLabel("Gender"));
-    private final ComboPane cityPanel = new ComboPane(new JLabel("Destination City"));
-    private final ComboPane statePanel = new ComboPane(new JLabel("Destination State"));
-    private final ComboPane datePanel = new ComboPane(new JLabel("Departure Date"));
-    private final ComboPane departPanel = new ComboPane(new JLabel("Departure-Time"));
+    private final ComboPane genderPanel = new ComboPane("Gender");
+    private final ComboPane cityPanel = new ComboPane("Destination City");
+    private final ComboPane statePanel = new ComboPane("Destination State");
+    private final ComboPane datePanel = new ComboPane("Departure Date");
+    private final ComboPane departPanel = new ComboPane("Departure-Time");
 
     private final ComponentPane[] allPanes = { firstPanel, lastPanel, emailPanel,
             numberPanel, agePanel, cityPanel, statePanel, genderPanel, datePanel, departPanel };
@@ -39,7 +40,7 @@ public class Gooey extends JFrame implements ActionListener {
         initFrame();
     }
 
-    void addKeyListeners() {
+    private void addKeyListeners() {
         KeyAdapter phoneNumberListener = new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
                 JTextField field = (JTextField) e.getSource();
@@ -59,16 +60,13 @@ public class Gooey extends JFrame implements ActionListener {
     }
 
     private void initFrame() {
-        String frameImgFile = "resources\\plane.jpg";
-        java.io.File f = new java.io.File(frameImgFile);
-        System.out.println(f.getAbsolutePath());
         try {
             UIManager.setLookAndFeel(
                     UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        setIconImage(Toolkit.getDefaultToolkit().getImage(frameImgFile));
+        setIconImage(Toolkit.getDefaultToolkit().getImage("BoardingPass\\resources\\plane.jpg"));
         setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
         pack();
         setResizable(false);
@@ -82,8 +80,8 @@ public class Gooey extends JFrame implements ActionListener {
         String[] timeArray = App.getDefaultTimes();
         String[] dates = App.getDefaultDates();
         String[] genders = new String[] { "MALE", "FEMALE", "NON-BINARY" };
-        String[] cities = new String[] { "New York", "Miami", "Los Angeles" };
-        String[] states = new String[] { "New York", "Florida", "California" };
+        String[] cities = new String[] { "New York", "Miami", "Denver", "Austin", "Chicago" };
+        String[] states = new String[] { "New York", "Florida", "Colorado", "Texas", "Illinois" };
         // set the models on the combopanes
         genderPanel.setModel(genders);
         cityPanel.setModel(cities);
@@ -147,11 +145,26 @@ public class Gooey extends JFrame implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent event) {
         if (checkValidity()) {
             ArrayList<String> list = new ArrayList<>();
-            for (var x : allPanes)
-                list.add(x.getText());
+            String price, arrival;
+            try {
+                // alter price by gender
+                price = App.getTicketPrice(cityPanel.getIndex(), Integer.parseInt(agePanel.getText()),
+                        genderPanel.getText());
+                // get arrival times
+                arrival = App.getArrivalTime(cityPanel.getIndex(), departPanel.getText(), datePanel.getText());
+                // add all pane information to list
+                for (var x : allPanes)
+                    list.add(x.getText());
+                // add prices to list
+                list.add(price);
+                // add arrivaltimes to list
+                list.add(arrival);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             generateTicket(list);
         } else {
             JOptionPane.showMessageDialog(this, "One or more fields is invalid.");
