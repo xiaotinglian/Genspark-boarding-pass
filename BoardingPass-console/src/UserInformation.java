@@ -18,7 +18,7 @@ public class UserInformation {
     private String ETA;
 
 
-//    private String ETA;
+    //    private String ETA;
     // The UserInformation constructor;
     public UserInformation(String initName,int initId,Double initTicketPrice,String initETA, String initEmail, String initPhoneNumber,String initGender,
                            int initAge, String initDate, String initDeparture, String initDestination, String initDepartureTime){
@@ -122,10 +122,10 @@ public class UserInformation {
             ticketPrice = ticketPrice/2;
         } else if(getAge()>=60){
             ticketPrice= (ticketPrice*40)/100;
-        };
-        if(getGender() == "female"){
+        }
+        if(getGender().equals("female")){
             ticketPrice = (ticketPrice*75)/100;
-        };
+        }
 
         return ticketPrice;
     }
@@ -143,10 +143,12 @@ public class UserInformation {
         NumberFormat n = NumberFormat.getCurrencyInstance(Locale.US);
         String result = null;
         try {
-            result = "Boarding Pass Number: " + getBoardingPassNumber() +"             Date: " + getDate()
-                    + "\nName: " + getName()
+            result = "Name: " + getName()+"\t\t\t\t\tDate: " + getDate()
+//                    "Boarding Pass Number: " + getBoardingPassNumber() +"             Date: " + getDate()
+//                    + "Name: " + getName()
+                    + "\nBoarding Pass Number: " + getBoardingPassNumber()
                     + "\nGender: " + getGender() + ". Age: " + getAge()
-                    + "\nEmail: " + getEmail() + "                  Phone Number: " + getPhoneNumber()
+                    + "\nEmail: " + getEmail() + "\t\t\t\t\tPhone Number: " + getPhoneNumber()
                     + "\nOrigin: " + getDeparture()
                     + "\nDestination: " + getDestination()
                     + "\nDeparture Time: " + getDepartureTime()

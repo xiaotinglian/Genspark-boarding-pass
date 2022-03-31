@@ -1,0 +1,36 @@
+Name: Khang Nguyen					Date: Mon Apr 04
+Boarding Pass Number: 198041
+Gender: male. Age: 29
+Email: noozip2241993@gmail.com					Phone Number: 7148372804
+Origin: Los Angeles
+Destination: London
+Departure Time:  11:00
+ETA: Mon Apr 04 09:00:00 CDT 2022
+Ticket Price: $706.00
+Name: Kristy Nguyen					Date: Fri Nov 11
+Boarding Pass Number: 567349
+Gender: female. Age: 31
+Email: kristynguyen2690@gmail.com					Phone Number: 7148372804
+Origin: Los Angeles
+Destination: Paris
+Departure Time:  11:00
+ETA: Fri Nov 11 10:00:00 CST 2022
+Ticket Price: $780.00
+Name: Kristy Nguyen					Date: Fri Nov 11
+Boarding Pass Number: 443437
+Gender: male. Age: 21
+Email: noozip2241993@gmail.com					Phone Number: 7148372804
+Origin: Los Angeles
+Destination: London
+Departure Time:  23:00
+ETA: Fri Nov 11 09:00:00 CST 2022
+Ticket Price: $706.00
+Name: John Nah					Date: Fri Nov 11
+Boarding Pass Number: 637317
+Gender: male. Age: 88
+Email: john@gmail.com					Phone Number: 2131231
+Origin: Los Angeles
+Destination: Paris
+Departure Time:  11:00
+ETA: Fri Nov 11 10:00:00 CST 2022
+Ticket Price: $124.80
