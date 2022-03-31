@@ -1,5 +1,0 @@
-New York City,6,112
-Miami,5,150
-Denver,2,43
-Austin,3,50
-Chicago,4,100 
