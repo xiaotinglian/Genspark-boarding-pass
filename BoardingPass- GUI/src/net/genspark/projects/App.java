@@ -34,7 +34,7 @@ public class App {
     
     public static String[] getDefaultDates() {
         return LocalDate.now().datesUntil(
-                LocalDate.of(2023, 4, LocalDate.now().getDayOfMonth()))
+                LocalDate.of(2023, 5, LocalDate.now().getDayOfMonth()))
                 .map(LocalDate::toString)
                 .toArray(String[]::new);
     }
