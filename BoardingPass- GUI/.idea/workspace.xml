@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db342320-937e-49a6-8466-10864fa0cb5e" name="Changes" comment="fix 'April 31 invalid'">
-      <change afterPath="$PROJECT_DIR$/src/net/genspark/projects/Itinerary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardingPass- GUI/net/genspark/projects/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardingPass- GUI/net/genspark/projects/App.class" afterDir="false" />
-    </list>
+    <list default="true" id="db342320-937e-49a6-8466-10864fa0cb5e" name="Changes" comment="add Itinerary.java" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +30,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BoardingPass-console" />
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -69,7 +66,7 @@
       <workItem from="1648733566642" duration="1208000" />
       <workItem from="1648744331032" duration="11000" />
       <workItem from="1648744357605" duration="31000" />
-      <workItem from="1648749070215" duration="635000" />
+      <workItem from="1648749070215" duration="1021000" />
     </task>
     <task id="LOCAL-00001" summary="few change">
       <created>1648732291925</created>
@@ -92,7 +89,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648749226270</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add Itinerary.java">
+      <created>1648749932987</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648749932987</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add Itinerary.java">
+      <created>1648750098006</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648750098006</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +136,7 @@
     <MESSAGE value="few change" />
     <MESSAGE value="delete invalid data" />
     <MESSAGE value="fix 'April 31 invalid'" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 'April 31 invalid'" />
+    <MESSAGE value="add Itinerary.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Itinerary.java" />
   </component>
 </project>
