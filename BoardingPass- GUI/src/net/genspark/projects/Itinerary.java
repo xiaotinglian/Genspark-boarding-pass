@@ -12,11 +12,12 @@ public class Itinerary {
     private String gender;
     private String date;
     private String departureTime;
+    private double price;
 
     public Itinerary() {
     }
 
-    public Itinerary(String passNumber, String lastName, String firstName, String email, String phoneNumber, int age, String city, String state, String gender, String date, String departureTime) {
+    public Itinerary(String passNumber, String lastName, String firstName, String email, String phoneNumber, int age, String city, String state, String gender, String date, String departureTime, double price) {
         this.passNumber = passNumber;
         this.lastName = lastName;
         this.firstName = firstName;
@@ -28,6 +29,7 @@ public class Itinerary {
         this.gender = gender;
         this.date = date;
         this.departureTime = departureTime;
+        this.price=price;
     }
 
     @Override
@@ -133,5 +135,13 @@ public class Itinerary {
 
     public void setDepartureTime(String departureTime) {
         this.departureTime = departureTime;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65b08c3e-20de-4721-8b49-7c1f598e348f" name="Changes" comment="few changes" />
+    <list default="true" id="65b08c3e-20de-4721-8b49-7c1f598e348f" name="Changes" comment="few changes">
+      <change afterPath="$PROJECT_DIR$/../BoardingPass- GUI/src/net/genspark/projects/Itinerary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoardingPass- GUI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BoardingPass- GUI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoardingPass- GUI/out/production/BoardingPass- GUI/net/genspark/projects/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BoardingPass- GUI/out/production/BoardingPass- GUI/net/genspark/projects/App.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +30,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BoardingPass- GUI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="GeneratingBoardingPass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -52,6 +56,7 @@
       <updated>1648731770124</updated>
       <workItem from="1648731771330" duration="167000" />
       <workItem from="1648731947150" duration="303000" />
+      <workItem from="1648749722572" duration="219000" />
     </task>
     <task id="LOCAL-00001" summary="few changes">
       <created>1648731832234</created>
