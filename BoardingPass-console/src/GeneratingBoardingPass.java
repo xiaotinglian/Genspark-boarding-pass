@@ -31,38 +31,34 @@ public class GeneratingBoardingPass {
         String ETA;
 
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Enter your full name: ");
         name = scanner.nextLine();
-//        name = "Khang Duc Nguyen"
+
         System.out.println("Enter your email: ");
         email = scanner.nextLine();
-//        email = "noozip2241993@gmail.com";
+
         System.out.println("Enter your phone number: ");
         phoneNumber = scanner.nextLine();
-//        phoneNumber = "7148372804";
+
         System.out.println("Enter your gender(male, female, or other): ");
         gender = scanner.nextLine();
-//        gender ="female";
+
         System.out.println("Enter your age: ");
         age = scanner.nextInt();
 
         System.out.println("Enter your date in format of dd/mm/yyyy: ");
-//        String userDate = "6/6/2022";
         String userDate = scanner.next();
         date =new SimpleDateFormat("dd/MM/yyyy").parse(userDate).toString().substring(0,10);
 
-
         Scanner anotherScanner = new Scanner(System.in);
-//        date = scanner.nextLine();
         System.out.println("Your departure: Los Angeles ");
         departure = "Los Angeles";
-//        departure = scanner.nextLine();
-        System.out.println("Enter your destination: ");
-//        destination = "London";
-        destination = anotherScanner.nextLine();
-        System.out.println("Enter your departure time in format of hh:mm: ");
-//        departureTime = " 12:30";
 
+        System.out.println("Enter your destination: ");
+        destination = anotherScanner.nextLine();
+
+        System.out.println("Enter your departure time in format of hh:mm: ");
         departureTime = anotherScanner.nextLine();
         departureTime = " " + departureTime;
 

@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65b08c3e-20de-4721-8b49-7c1f598e348f" name="Changes" comment="few changes">
-      <change afterPath="$PROJECT_DIR$/Kristy Nguyen.text" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customerInfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardingPass-console/GeneratingBoardingPass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardingPass-console/GeneratingBoardingPass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardingPass-console/UserInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardingPass-console/UserInformation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeneratingBoardingPass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneratingBoardingPass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInformation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
