@@ -59,15 +59,10 @@ public class App {
             ticketPriceList.add(flightInfo[2]);
         }
 
-        double ticketPrice = switch (destination) {
-            case 0 -> Double.parseDouble(ticketPriceList.get(0));
-            case 1 -> Double.parseDouble(ticketPriceList.get(1));
-            case 2 -> Double.parseDouble(ticketPriceList.get(2));
-            case 3 -> Double.parseDouble(ticketPriceList.get(3));
-            case 4 -> Double.parseDouble(ticketPriceList.get(4));
-            default -> 0;
-        };
+        //pulling ticket price from flightInfo
+        double ticketPrice = Double.parseDouble(ticketPriceList.get(destination));
 
+        //If/else statement to apply discounts to ticketPrice for seniors, children, and women.
         if (age >= 60) {
             if (gender.equals("FEMALE")) {
                 ticketPrice = ticketPrice * (.85);
@@ -99,17 +94,11 @@ public class App {
          flightLengthList.add(flightInfo[1]);
      }
 
+     //Combining depart time and date to LocalDateTime and adding flight Time from flightInfo
      LocalTime departTime = LocalTime.parse(depart);
      LocalDate departDate = LocalDate.parse(date);
      LocalDateTime departure = LocalDateTime.of(departDate, departTime);
-     LocalDateTime ETA = switch (destination) {
-         case 0 -> departure.plusHours(Long.parseLong(flightLengthList.get(0)));
-         case 1 -> departure.plusHours(Long.parseLong(flightLengthList.get(1)));
-         case 2 -> departure.plusHours(Long.parseLong(flightLengthList.get(2)));
-         case 3 -> departure.plusHours(Long.parseLong(flightLengthList.get(3)));
-         case 4 -> departure.plusHours(Long.parseLong(flightLengthList.get(4)));
-         default -> departure;
-     };
+     LocalDateTime ETA = departure.plusHours(Long.parseLong(flightLengthList.get(destination)));
      return String.valueOf(ETA);
  }
 
