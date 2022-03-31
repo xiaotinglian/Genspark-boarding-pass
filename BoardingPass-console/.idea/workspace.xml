@@ -14,16 +14,19 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="279UPMFbZkSQcWcVlk1jUAku0i1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BoardingPass- GUI" />
   </component>
   <component name="RunManager">
     <configuration name="GeneratingBoardingPass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -48,6 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648731770124</updated>
       <workItem from="1648731771330" duration="167000" />
+      <workItem from="1648731947150" duration="303000" />
     </task>
     <task id="LOCAL-00001" summary="few changes">
       <created>1648731832234</created>
@@ -70,7 +74,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648731917178</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="few changes">
+      <created>1648731954120</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648731954120</updated>
+    </task>
+    <task id="LOCAL-00005" summary="few changes">
+      <created>1648732216405</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648732216405</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,6 +106,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="few changes" />
     <option name="LAST_COMMIT_MESSAGE" value="few changes" />
   </component>
