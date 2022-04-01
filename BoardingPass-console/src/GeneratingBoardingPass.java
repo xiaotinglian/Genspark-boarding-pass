@@ -9,9 +9,13 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class GeneratingBoardingPass {
+    static Charset utf8 = StandardCharsets.UTF_8;
+    static List<String> list = new ArrayList<>();
 
     public static void main(String[] args) throws ParseException, IOException {
-	// write your code here
+        Files.write(Paths.get("customerInfo.txt"), list,utf8,
+                StandardOpenOption.CREATE);
+        // write your code here
         String name;
         String email;
         String phoneNumber;
@@ -21,49 +25,95 @@ public class GeneratingBoardingPass {
         String departure;
         String destination;
         String departureTime;
+        int boardingPassNumber ;
+        double ticketPrice;
+        int length;
+        String ETA;
 
-        double ticketPrice= 0;
-
-        final int Max = 99999999;
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter your full name: ");
         name = scanner.nextLine();
-//        name = "Khang Duc Nguyen"
+
         System.out.println("Enter your email: ");
         email = scanner.nextLine();
-//        email = "noozip2241993@gmail.com";
+
         System.out.println("Enter your phone number: ");
         phoneNumber = scanner.nextLine();
-//        phoneNumber = "7148372804";
+
         System.out.println("Enter your gender(male, female, or other): ");
         gender = scanner.nextLine();
-//        gender ="female";
+
         System.out.println("Enter your age: ");
         age = scanner.nextInt();
 
         System.out.println("Enter your date in format of dd/mm/yyyy: ");
-//        String userDate = "6/6/2022";
         String userDate = scanner.next();
         date =new SimpleDateFormat("dd/MM/yyyy").parse(userDate).toString().substring(0,10);
 
-
         Scanner anotherScanner = new Scanner(System.in);
-//        date = scanner.nextLine();
         System.out.println("Your departure: Los Angeles ");
         departure = "Los Angeles";
-//        departure = scanner.nextLine();
-        System.out.println("Enter your destination: ");
-//        destination = "London";
-        destination = anotherScanner.nextLine();
-        System.out.println("Enter your departure time in format of hh:mm: ");
-//        departureTime = " 12:30";
 
+        System.out.println("Enter your destination: ");
+        destination = anotherScanner.nextLine();
+
+        System.out.println("Enter your departure time in format of hh:mm: ");
         departureTime = anotherScanner.nextLine();
         departureTime = " " + departureTime;
 
+
+        boardingPassNumber = getBoardingPassNumber();
+        ticketPrice = getTicketPrice(destination);
+        length = getLength(destination);
+        ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate+departureTime),length).toString();
+        UserInformation user1 = new UserInformation(name,boardingPassNumber,ticketPrice,ETA,email,phoneNumber,gender,age,date,departure,
+                destination,departureTime);
+        System.out.println(user1);
+
+        writeToTextFile(name, user1);
+
+    }
+
+    private static int getBoardingPassNumber() throws IOException {
+        int boardingPassNumber;
+        int Max =999999;
         Random rand = new Random();
-        int boardingPassNumber = rand.nextInt(Max) ;
+        String pathCustomer = "customerInfo.txt";
+        List<Integer> boardingPassNumberList = new ArrayList<>();
+        List<String> userList = Files.readAllLines(Paths.get(pathCustomer));
+        for (String line : userList
+        ) {
+            String[] value =line.split(":");
+            if(value[0].startsWith("Boarding")){
+                boardingPassNumberList.add(Integer.parseInt(value[1].replaceAll("\\s","")));
+            }
+        }
+
+//        System.out.println(boardingPassNumberList);
+        while(true){
+            boardingPassNumber = rand.nextInt(Max);
+//            System.out.println(boardingPassNumber);
+            if(!boardingPassNumberList.contains(boardingPassNumber)){
+                break;
+            }
+        }
+        return boardingPassNumber;
+    }
+    public static Double getTicketPrice(String destination) throws IOException {
+        double ticketPrice =0.00;
+        String path = "destination.txt";
+        List<String> destinationList = Files.readAllLines(Paths.get(path));
+        for (String line : destinationList
+        ) {
+            String[] value =line.split(",");
+            if(value[0].equals(destination)){
+                ticketPrice = Double.parseDouble(value[2]);
+            }
+        }
+        return ticketPrice;
+    }
+    public static int getLength(String destination) throws IOException {
         String path = "destination.txt";
         List<String> destinationList = Files.readAllLines(Paths.get(path));
         int length = 0;
@@ -71,16 +121,10 @@ public class GeneratingBoardingPass {
         ) {
             String[] value =line.split(",");
             if(value[0].equals(destination)){
-                length = Integer.parseInt(value[1]);
-                ticketPrice = Double.parseDouble(value[2]);
+                length = Integer.parseInt(value[1].replaceAll("\\s",""));
             }
         }
-        String ETA = addHoursToJavaUtilDate(new SimpleDateFormat("dd/MM/yyyy").parse(userDate+departureTime),length).toString();
-        UserInformation user1 = new UserInformation(name,boardingPassNumber,ticketPrice,ETA,email,phoneNumber,gender,age,date,departure,
-                destination,departureTime);
-        System.out.println(user1.toString());
-        writeToTextFile(name, user1);
-
+        return length;
     }
     public static Date addHoursToJavaUtilDate(Date date, int hours) {
         Calendar calendar = Calendar.getInstance();
@@ -90,10 +134,11 @@ public class GeneratingBoardingPass {
     }
 
     private static void writeToTextFile(String name, UserInformation user1) throws IOException {
-        Charset utf8 = StandardCharsets.UTF_8;
-        List<String> list = new ArrayList<>();
         list.add(user1.toString());
-        Files.write(Paths.get(""+name+".txt"), list,utf8,
+        Files.write(Paths.get("customerInfo.txt"), list,utf8,
+                StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+        String firstName = name.split(" (?!.* )")[0];
+        Files.write(Paths.get(firstName+".txt"), list,utf8,
                 StandardOpenOption.CREATE, StandardOpenOption.APPEND);
     }
 }
