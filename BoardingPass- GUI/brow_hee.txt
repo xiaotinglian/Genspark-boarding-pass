@@ -1,0 +1,13 @@
+passNumber=303309464
+lastName='brow'
+firstName='hee'
+email='hee@gmail.com'
+phoneNumber='12412312'
+age='23'
+city='New York'
+state='New York'
+gender='MALE'
+date='2022-03-31'
+departureTime='00:00'
+price='112.0'
+ETA='2022-03-31T06:00'
