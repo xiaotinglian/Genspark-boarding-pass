@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db342320-937e-49a6-8466-10864fa0cb5e" name="Changes" comment="add Itinerary.java">
+    <list default="true" id="db342320-937e-49a6-8466-10864fa0cb5e" name="Changes" comment="remove old data from csv">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cake_kyky.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qewr_SDFA.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shawn_lian.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/net/genspark/projects/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardingPass- GUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BoardingPass- GUI.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info.csv" beforeDir="false" afterPath="$PROJECT_DIR$/info.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardingPass- GUI/net/genspark/projects/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardingPass- GUI/net/genspark/projects/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardingPass- GUI/net/genspark/projects/Gooey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardingPass- GUI/net/genspark/projects/Gooey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/genspark/projects/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/genspark/projects/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/genspark/projects/Gooey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/genspark/projects/Gooey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/genspark/projects/Itinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/genspark/projects/Itinerary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoardingPass-console/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BoardingPass-console/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -24,18 +37,40 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="277I574lnhBiaeKUQBVb3HtG8Ns" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BoardingPass-console" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/net/genspark/projects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../gensparkprojects/Genspark/Guess a number" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="net.genspark.projects" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AppTest.Price">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.genspark.projects.App" />
       <module name="BoardingPass- GUI" />
@@ -49,8 +84,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest.ArrivalTime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BoardingPass- GUI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.genspark.projects.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.genspark.projects" />
+      <option name="MAIN_CLASS_NAME" value="net.genspark.projects.AppTest" />
+      <option name="METHOD_NAME" value="ArrivalTime" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.Price" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BoardingPass- GUI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.genspark.projects.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.genspark.projects" />
+      <option name="MAIN_CLASS_NAME" value="net.genspark.projects.AppTest" />
+      <option name="METHOD_NAME" value="Price" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTest.Price" />
+        <item itemvalue="JUnit.AppTest.ArrivalTime" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
@@ -69,7 +138,10 @@
       <workItem from="1648733566642" duration="1208000" />
       <workItem from="1648744331032" duration="11000" />
       <workItem from="1648744357605" duration="31000" />
-      <workItem from="1648749070215" duration="2364000" />
+      <workItem from="1648749070215" duration="2397000" />
+      <workItem from="1648753493172" duration="53000" />
+      <workItem from="1648773939623" duration="2945000" />
+      <workItem from="1648776944030" duration="3387000" />
     </task>
     <task id="LOCAL-00001" summary="few change">
       <created>1648732291925</created>
@@ -113,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648750107518</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="remove old data from csv">
+      <created>1648751607700</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1648751607700</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,10 +222,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="few change" />
     <MESSAGE value="delete invalid data" />
     <MESSAGE value="fix 'April 31 invalid'" />
     <MESSAGE value="add Itinerary.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Itinerary.java" />
+    <MESSAGE value="remove old data from csv" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove old data from csv" />
   </component>
 </project>

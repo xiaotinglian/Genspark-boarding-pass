@@ -1,23 +1,24 @@
 package net.genspark.projects;
 
 public class Itinerary {
-    private String passNumber;
+    private int passNumber;
     private String lastName;
     private String firstName;
     private String email;
     private String phoneNumber;
-    private int age;
+    private String age;
     private String city;
     private String state;
     private String gender;
     private String date;
     private String departureTime;
-    private double price;
+    private String price;
+    private String ETA;
 
     public Itinerary() {
     }
 
-    public Itinerary(String passNumber, String lastName, String firstName, String email, String phoneNumber, int age, String city, String state, String gender, String date, String departureTime, double price) {
+    public Itinerary(int passNumber, String lastName, String firstName, String email, String phoneNumber, String age, String city, String state, String gender, String date, String departureTime, String price, String ETA) {
         this.passNumber = passNumber;
         this.lastName = lastName;
         this.firstName = firstName;
@@ -30,30 +31,31 @@ public class Itinerary {
         this.date = date;
         this.departureTime = departureTime;
         this.price=price;
+        this.ETA=ETA;
     }
 
     @Override
     public String toString() {
-        return "Itinerary{" +
-                "passNumber='" + passNumber + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", age=" + age +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", gender='" + gender + '\'' +
-                ", date='" + date + '\'' +
-                ", departureTime='" + departureTime + '\'' +
-                '}';
+        return "passNumber=" + passNumber +
+                "\nlastName='" + lastName + '\'' +
+                "\nfirstName='" + firstName + '\'' +
+                "\nemail='" + email + '\'' +
+                "\nphoneNumber='" + phoneNumber + '\'' +
+                "\nage='" + age + '\'' +
+                "\ncity='" + city + '\'' +
+                "\nstate='" + state + '\'' +
+                "\ngender='" + gender + '\'' +
+                "\ndate='" + date + '\'' +
+                "\ndepartureTime='" + departureTime + '\'' +
+                "\nprice='" + price + '\'' +
+                "\nETA='" + ETA + '\'';
     }
 
-    public String getPassNumber() {
+    public int getPassNumber() {
         return passNumber;
     }
 
-    public void setPassNumber(String passNumber) {
+    public void setPassNumber(int passNumber) {
         this.passNumber = passNumber;
     }
 
@@ -89,11 +91,11 @@ public class Itinerary {
         this.phoneNumber = phoneNumber;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -137,11 +139,19 @@ public class Itinerary {
         this.departureTime = departureTime;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getETA() {
+        return ETA;
+    }
+
+    public void setETA(String ETA) {
+        this.ETA = ETA;
     }
 }

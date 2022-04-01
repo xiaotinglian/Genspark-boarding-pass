@@ -1,0 +1,13 @@
+passNumber=203224250
+lastName='shawn'
+firstName='lian'
+email='shawn@gmail.com'
+phoneNumber='124523412'
+age='12'
+city='New York'
+state='New York'
+gender='MALE'
+date='2022-03-31'
+departureTime='00:00'
+price='56.0'
+ETA='2022-03-31T06:00'

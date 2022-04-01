@@ -167,13 +167,17 @@ public class Gooey extends JFrame implements ActionListener {
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
-            generateTicket(list);
+            try {
+                generateTicket(list);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
         } else {
             JOptionPane.showMessageDialog(this, "One or more fields is invalid.");
         }
     }
 
-    private void generateTicket(ArrayList<String> bookingInfo) {
+    private void generateTicket(ArrayList<String> bookingInfo) throws IOException {
         String userMsg = "'" + bookingInfo.get(0) + " " + bookingInfo.get(1) + "' has created a new booking.";
         App.saveInfo(bookingInfo);
         JOptionPane.showMessageDialog(this, userMsg);
