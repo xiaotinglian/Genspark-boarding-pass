@@ -86,20 +86,20 @@ public class App {
         //If/else statement to apply discounts to ticketPrice for seniors, children, and women.
         if (age >= 60) {
             if (gender.equals("FEMALE")) {
-                ticketPrice = ticketPrice * (.60);
-            } else {
                 ticketPrice = ticketPrice * .85;
+            } else {
+                ticketPrice = ticketPrice * .60;
             }
         }
         else if (age <= 12) {
             if (gender.equals("FEMALE")) {
-                ticketPrice = ticketPrice * .50;
-            } else {
                 ticketPrice = ticketPrice * .75;
+            } else {
+                ticketPrice = ticketPrice * .50;
             }
         }
         if (gender.equals("FEMALE")) {
-            ticketPrice = ticketPrice * .75;
+            ticketPrice = ticketPrice * .25;
         }
 
         String price = String.valueOf(ticketPrice);
