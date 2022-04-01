@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db342320-937e-49a6-8466-10864fa0cb5e" name="Changes" comment="final update" />
+    <list default="true" id="db342320-937e-49a6-8466-10864fa0cb5e" name="Changes" comment="final update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +57,7 @@
       <recent name="net.genspark.projects" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.AppTest.ArrivalTime">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.genspark.projects.App" />
       <module name="BoardingPass- GUI" />
@@ -103,9 +105,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.AppTest.Price" />
         <item itemvalue="JUnit.AppTest.ArrivalTime" />
+        <item itemvalue="JUnit.AppTest.Price" />
+        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -127,6 +129,8 @@
       <workItem from="1648753493172" duration="53000" />
       <workItem from="1648773939623" duration="2945000" />
       <workItem from="1648776944030" duration="3715000" />
+      <workItem from="1648780718161" duration="201000" />
+      <workItem from="1648820041235" duration="710000" />
     </task>
     <task id="LOCAL-00001" summary="few change">
       <created>1648732291925</created>
@@ -184,7 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648780631381</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="final update">
+      <created>1648780724125</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1648780724125</updated>
+    </task>
+    <task id="LOCAL-00010" summary="final update">
+      <created>1648780892552</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1648780892552</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
