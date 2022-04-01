@@ -88,18 +88,18 @@ public class App {
             if (gender.equals("FEMALE")) {
                 ticketPrice = ticketPrice * .85;
             } else {
-                ticketPrice = ticketPrice * .85;
+                ticketPrice = ticketPrice * .60;
             }
         }
         else if (age <= 12) {
             if (gender.equals("FEMALE")) {
-                ticketPrice = ticketPrice * .50;
-            } else {
                 ticketPrice = ticketPrice * .75;
+            } else {
+                ticketPrice = ticketPrice * .50;
             }
         }
         if (gender.equals("FEMALE")) {
-            ticketPrice = ticketPrice * .75;
+            ticketPrice = ticketPrice * .25;
         }
 
         String price = String.valueOf(ticketPrice);
