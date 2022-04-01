@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db342320-937e-49a6-8466-10864fa0cb5e" name="Changes" comment="remove old data from csv">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cake_kyky.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qewr_SDFA.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shawn_lian.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/net/genspark/projects/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardingPass- GUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BoardingPass- GUI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info.csv" beforeDir="false" afterPath="$PROJECT_DIR$/info.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardingPass- GUI/net/genspark/projects/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardingPass- GUI/net/genspark/projects/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardingPass- GUI/net/genspark/projects/Gooey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardingPass- GUI/net/genspark/projects/Gooey.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/genspark/projects/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/genspark/projects/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/genspark/projects/Gooey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/genspark/projects/Gooey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/genspark/projects/Itinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/genspark/projects/Itinerary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BoardingPass-console/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BoardingPass-console/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="db342320-937e-49a6-8466-10864fa0cb5e" name="Changes" comment="final update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,7 +126,7 @@
       <workItem from="1648749070215" duration="2397000" />
       <workItem from="1648753493172" duration="53000" />
       <workItem from="1648773939623" duration="2945000" />
-      <workItem from="1648776944030" duration="3387000" />
+      <workItem from="1648776944030" duration="3715000" />
     </task>
     <task id="LOCAL-00001" summary="few change">
       <created>1648732291925</created>
@@ -192,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648751607700</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="final update">
+      <created>1648780631381</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1648780631381</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +220,7 @@
     <MESSAGE value="fix 'April 31 invalid'" />
     <MESSAGE value="add Itinerary.java" />
     <MESSAGE value="remove old data from csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove old data from csv" />
+    <MESSAGE value="final update" />
+    <option name="LAST_COMMIT_MESSAGE" value="final update" />
   </component>
 </project>
