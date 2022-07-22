@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BoardingPass- GUI/BoardingPass- GUI.iml" filepath="$PROJECT_DIR$/BoardingPass- GUI/BoardingPass- GUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BoardingPass-console/BoardingPass-console.iml" filepath="$PROJECT_DIR$/BoardingPass-console/BoardingPass-console.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/generateBoardingPass.iml" filepath="$PROJECT_DIR$/.idea/generateBoardingPass.iml" />
+    </modules>
+  </component>
+</project>
